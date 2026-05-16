@@ -281,10 +281,10 @@ export const testimonials = [
 ]
 
 export const stats = [
-  { value: '500+', label: 'Products Listed' },
-  { value: '100+', label: 'Verified Clients' },
-  { value: '50+',  label: 'Brands Stocked' },
-  { value: '6+',   label: 'Years in Business' },
+  { value: '30+', label: 'Products Listed' },
+  { value: '15+', label: 'Verified Clients' },
+  { value: '20+',  label: 'Brands Stocked' },
+  { value: '6+',   label: 'Months in Business' },
 ]
 
 export const brands = [

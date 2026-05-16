@@ -31,7 +31,7 @@ export default function AboutPage() {
             <h1 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 800, fontSize: 'clamp(36px, 5vw, 54px)', color: '#FFFFFF', lineHeight: 1.1, marginBottom: 20 }}>
               Simplifying Industrial<br />
               <span style={{ background: 'linear-gradient(135deg, #C9A84C, #E2C46A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Sourcing Since 2018
+                Sourcing Since 2025
               </span>
             </h1>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 480 }}>
@@ -55,10 +55,10 @@ export default function AboutPage() {
           <FadeUp delay={0.15}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'rgba(201,168,76,0.15)' }}>
               {[
-                { num: '500+',  lbl: 'Products in Catalog' },
-                { num: '100+',  lbl: 'Verified B2B Clients' },
-                { num: '50+',   lbl: 'Global Brands' },
-                { num: '6+',    lbl: 'Years of Expertise' },
+                { num: '30+',  lbl: 'Products in Catalog' },
+                { num: '12+',  lbl: 'Verified B2B Clients' },
+                { num: '20+',   lbl: 'Global Brands' },
+                { num: '6+',    lbl: 'Months of Expertise' },
               ].map((s, i) => (
                 <div key={i} style={{ background: '#111111', padding: '32px 28px', textAlign: 'center' }}>
                   <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 40, fontWeight: 900, color: '#C9A84C', lineHeight: 1 }}>{s.num}</p>
@@ -132,33 +132,14 @@ export default function AboutPage() {
             <SectionLabel>Our Journey</SectionLabel>
             <GoldLine />
             <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 56 }}>
-              Built on Six Years of Trust
+              Built on Six Months of Trust
             </h2>
           </FadeUp>
 
-          <div style={{ position: 'relative', maxWidth: 680 }}>
-            {/* Vertical line */}
-            <div style={{ position: 'absolute', left: 64, top: 0, bottom: 0, width: 1, background: '#E8E8E8' }} />
-
-            {timeline.map((item, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
-                <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: 28, marginBottom: 36, alignItems: 'flex-start', position: 'relative' }}>
-                  {/* Year */}
-                  <div style={{ textAlign: 'right', paddingRight: 20 }}>
-                    <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 13, fontWeight: 700, color: '#C9A84C' }}>{item.year}</span>
-                  </div>
-                  {/* Dot */}
-                  <div style={{ position: 'absolute', left: 60, top: 5, width: 9, height: 9, background: '#C9A84C', borderRadius: '50%', border: '2px solid #FAFAFA' }} />
-                  {/* Content */}
-                  <div style={{ paddingLeft: 14 }}>
-                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 15, fontWeight: 700, color: '#1A1A1A', marginBottom: 6 }}>{item.title}</p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: '#6B6B6B', lineHeight: 1.65 }}>{item.desc}</p>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
+          
+          
           </div>
-        </div>
+      
       </section>
 
       {/* Industries */}

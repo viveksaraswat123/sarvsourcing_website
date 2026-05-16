@@ -18,7 +18,7 @@ const contactInfo = [
   },
   {
     label: 'Business Hours',
-    lines: ['Monday – Saturday', '9:00 AM – 6:30 PM IST'],
+    lines: ['Monday - Saturday', '9:00 AM - 6:30 PM IST'],
   },
 ]
 
