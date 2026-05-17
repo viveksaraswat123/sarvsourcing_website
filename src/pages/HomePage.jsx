@@ -9,62 +9,40 @@ import { FadeUp, SectionLabel, GoldLine, BtnPrimary, BtnOutline } from '../compo
 import { categories, products, testimonials, stats, industries } from '../data/index.js'
 
 export default function HomePage() {
-  const [modalOpen, setModalOpen]   = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
   const [activeProduct, setProduct] = useState(null)
-
   const openInquiry = prod => { setProduct(prod); setModalOpen(true) }
   const featuredProducts = products.filter(p => p.featured)
 
   return (
     <>
       <Hero />
-
-      {/* Brand ticker */}
       <BrandTicker />
 
-      {/* ── CATEGORIES ─────────────────────────────────── */}
-      <section style={{ padding: '96px 24px', background: '#FFFFFF' }}>
+      {/* ── CATEGORIES ── */}
+      <section className="py-16 sm:py-24 px-5 sm:px-8" style={{ background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto">
           <FadeUp>
             <SectionLabel>Categories</SectionLabel>
             <GoldLine />
-            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 8, marginTop: 0 }}>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 4vw, 40px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 8, marginTop: 0 }}>
               Browse by Category
             </h2>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 16, color: '#6B6B6B', maxWidth: 500, lineHeight: 1.7, marginBottom: 52 }}>
-              From electronic components to IT hardware - find everything your business needs.
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 16px)', color: '#6B6B6B', maxWidth: 500, lineHeight: 1.7, marginBottom: 40 }}>
+              From electronic components to IT hardware — find everything your business needs.
             </p>
           </FadeUp>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 1, background: '#E8E8E8', border: '1px solid #E8E8E8' }}>
+          {/* Responsive: 1 col mobile → 2 col tablet → 4 col desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 1, background: '#E8E8E8', border: '1px solid #E8E8E8' }}>
             {categories.map((cat, i) => (
               <FadeUp key={cat.id} delay={i * 0.06}>
-                <Link
-                  to={`/products?cat=${cat.id}`}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <motion.div
-                    whileHover={{ background: '#FAFAF5' }}
-                    style={{
-                      background: '#FFFFFF',
-                      padding: '28px 24px',
-                      cursor: 'pointer',
-                      borderRight: '1px solid #E8E8E8',
-                      transition: 'background 0.2s',
-                      display: 'block',
-                    }}
-                  >
-                    {/* Category identifier bar */}
-                    <div style={{ width: 28, height: 2, background: 'linear-gradient(90deg, #C9A84C, #E2C46A)', marginBottom: 16 }} />
-                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 14, fontWeight: 700, color: '#1A1A1A', marginBottom: 6, lineHeight: 1.3 }}>
-                      {cat.name}
-                    </p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: '#A8A8A8', marginBottom: 14, lineHeight: 1.5 }}>
-                      {cat.description}
-                    </p>
-                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, fontWeight: 600, color: '#C9A84C', letterSpacing: '0.08em' }}>
-                      {cat.count} products →
-                    </p>
+                <Link to={`/products?cat=${cat.id}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                  <motion.div whileHover={{ background: '#FAFAF5' }}
+                    style={{ background: '#FFFFFF', padding: '24px 20px', cursor: 'pointer', transition: 'background 0.2s', height: '100%' }}>
+                    <div style={{ width: 28, height: 2, background: 'linear-gradient(90deg, #C9A84C, #E2C46A)', marginBottom: 14 }} />
+                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 14, fontWeight: 700, color: '#1A1A1A', marginBottom: 5, lineHeight: 1.3 }}>{cat.name}</p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: '#A8A8A8', marginBottom: 12, lineHeight: 1.5 }}>{cat.description}</p>
+                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, fontWeight: 600, color: '#C9A84C', letterSpacing: '0.08em' }}>{cat.count} products →</p>
                   </motion.div>
                 </Link>
               </FadeUp>
@@ -73,25 +51,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FEATURED PRODUCTS ───────────────────────────── */}
-      <section style={{ padding: '96px 24px', background: '#FAFAFA' }}>
+      {/* ── FEATURED PRODUCTS ── */}
+      <section className="py-16 sm:py-24 px-5 sm:px-8" style={{ background: '#FAFAFA' }}>
         <div className="max-w-7xl mx-auto">
           <FadeUp>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48, flexWrap: 'wrap', gap: 16 }}>
+            <div className="flex flex-wrap justify-between items-end gap-4 mb-10">
               <div>
                 <SectionLabel>Featured Products</SectionLabel>
                 <GoldLine />
-                <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#1A1A1A', margin: 0 }}>
+                <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 4vw, 40px)', fontWeight: 800, color: '#1A1A1A', margin: 0 }}>
                   Popular This Month
                 </h2>
               </div>
-              <Link to="/products">
-                <BtnOutline dark>View All Products</BtnOutline>
-              </Link>
+              <Link to="/products"><BtnOutline dark>View All Products</BtnOutline></Link>
             </div>
           </FadeUp>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 20 }}>
+          {/* 1 col → 2 col → 3 col */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ gap: 16 }}>
             {featuredProducts.map((prod, i) => (
               <FadeUp key={prod.id} delay={i * 0.08}>
                 <ProductCard product={prod} onInquiry={openInquiry} />
@@ -101,52 +77,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── WHY SARV ────────────────────────────────────── */}
-      <section style={{ padding: '96px 24px', background: '#0F0F0F' }}>
+      {/* ── WHY SARV ── */}
+      <section className="py-16 sm:py-24 px-5 sm:px-8" style={{ background: '#0F0F0F' }}>
         <div className="max-w-7xl mx-auto">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          {/* Stack on mobile, side-by-side on desktop */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <FadeUp>
               <SectionLabel>Why SARV</SectionLabel>
               <GoldLine />
-              <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#FFFFFF', marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 4vw, 40px)', fontWeight: 800, color: '#FFFFFF', marginBottom: 16 }}>
                 Your Sourcing Partner, Not Just a Supplier
               </h2>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 440 }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 15px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 440 }}>
                 We go beyond transactions. SARV provides end-to-end procurement support — from specification matching to bulk fulfillment — so your business never stops.
               </p>
-              <div style={{ marginTop: 36 }}>
+              <div style={{ marginTop: 32 }}>
                 <Link to="/about"><BtnPrimary>Learn About Us</BtnPrimary></Link>
               </div>
             </FadeUp>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'rgba(255,255,255,0.04)' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 1, background: 'rgba(255,255,255,0.04)' }}>
               {[
-                { title: 'Verified Quality',    desc: 'All products sourced from certified manufacturers with full traceability.' },
-                { title: 'Bulk Pricing',         desc: 'Direct manufacturer relationships give you best-in-class volume pricing.' },
-                { title: 'Fast Fulfillment',     desc: 'Pan-India logistics network for quick turnaround on bulk orders.' },
-                { title: 'Technical Expertise',  desc: 'Our specialists help you find the exact specification you need.' },
-                { title: 'Custom Sourcing',      desc: 'Submit any requirement — we source what the market doesn\'t stock.' },
-                { title: 'Single Vendor',        desc: 'One trusted source for all electronic, IT, and industrial needs.' },
+                { title: 'Verified Quality', desc: 'All products sourced from certified manufacturers with full traceability.' },
+                { title: 'Bulk Pricing', desc: 'Direct manufacturer relationships give you best-in-class volume pricing.' },
+                { title: 'Fast Fulfillment', desc: 'Pan-India logistics for quick turnaround on bulk orders.' },
+                { title: 'Technical Expertise', desc: 'Our specialists help you find the exact specification you need.' },
+                { title: 'Custom Sourcing', desc: 'Submit any requirement — we source what the market doesn\'t stock.' },
+                { title: 'Single Vendor', desc: 'One trusted source for all electronic, IT, and industrial needs.' },
               ].map((item, i) => (
                 <FadeUp key={i} delay={i * 0.07}>
-                  <div
-                    style={{
-                      padding: '24px 20px',
-                      background: '#111111',
-                      borderBottom: i < 4 ? '1px solid rgba(255,255,255,0.04)' : 'none',
-                      borderRight: i % 2 === 0 ? '1px solid rgba(255,255,255,0.04)' : 'none',
-                      transition: 'background 0.2s',
-                    }}
+                  <div style={{ padding: '22px 18px', background: '#111111', borderBottom: '1px solid rgba(255,255,255,0.04)', borderRight: '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s' }}
                     onMouseEnter={e => e.currentTarget.style.background = '#161616'}
-                    onMouseLeave={e => e.currentTarget.style.background = '#111111'}
-                  >
-                    <div style={{ width: 20, height: 1.5, background: 'linear-gradient(90deg, #C9A84C, #E2C46A)', marginBottom: 12 }} />
-                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 13, fontWeight: 700, color: '#FFFFFF', marginBottom: 6 }}>
-                      {item.title}
-                    </p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6 }}>
-                      {item.desc}
-                    </p>
+                    onMouseLeave={e => e.currentTarget.style.background = '#111111'}>
+                    <div style={{ width: 20, height: 1.5, background: 'linear-gradient(90deg, #C9A84C, #E2C46A)', marginBottom: 10 }} />
+                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 13, fontWeight: 700, color: '#FFFFFF', marginBottom: 5 }}>{item.title}</p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
                 </FadeUp>
               ))}
@@ -155,23 +120,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STATS ───────────────────────────────────────── */}
-      <section style={{ padding: '72px 24px', background: '#FAF4D8', borderTop: '2px solid #C9A84C' }}>
+      {/* ── STATS ── */}
+      <section className="py-14 px-5 sm:px-8" style={{ background: '#FAF4D8', borderTop: '2px solid #C9A84C' }}>
         <div className="max-w-7xl mx-auto">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, borderLeft: '1px solid rgba(201,168,76,0.25)' }}>
+          {/* 2 col mobile → 4 col desktop */}
+          <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((s, i) => (
               <FadeUp key={i} delay={i * 0.1}>
-                <div style={{
-                  padding: '24px 32px',
-                  borderRight: '1px solid rgba(201,168,76,0.25)',
-                  textAlign: 'center',
-                }}>
-                  <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 44, fontWeight: 900, color: '#9A7A08', lineHeight: 1 }}>
-                    {s.value}
-                  </p>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: '#7A5F06', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: 6 }}>
-                    {s.label}
-                  </p>
+                <div style={{ padding: '20px 16px', borderRight: '1px solid rgba(201,168,76,0.25)', textAlign: 'center' }}>
+                  <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(32px, 5vw, 44px)', fontWeight: 900, color: '#9A7A08', lineHeight: 1 }}>{s.value}</p>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: '#7A5F06', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: 6 }}>{s.label}</p>
                 </div>
               </FadeUp>
             ))}
@@ -179,64 +137,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ────────────────────────────────── */}
-      <section style={{ padding: '96px 24px', background: '#FFFFFF' }}>
+      {/* ── TESTIMONIALS ── */}
+      <section className="py-16 sm:py-24 px-5 sm:px-8" style={{ background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto">
           <FadeUp>
             <SectionLabel>Client Testimonials</SectionLabel>
             <GoldLine />
-            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 48 }}>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 4vw, 40px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 40 }}>
               What Our Clients Say
             </h2>
           </FadeUp>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 24 }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: 20 }}>
             {testimonials.map((t, i) => (
               <FadeUp key={t.id} delay={i * 0.1}>
-                <div style={{
-                  padding: '32px',
-                  border: '1px solid #E8E8E8',
-                  background: '#FFFFFF',
-                  position: 'relative',
-                  transition: 'border-color 0.2s, box-shadow 0.2s',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.35)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(0,0,0,0.05)' }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = '#E8E8E8'; e.currentTarget.style.boxShadow = 'none' }}
-                >
-                  {/* Quote mark */}
-                  <div style={{
-                    fontFamily: "'Poppins', sans-serif",
-                    fontSize: 64,
-                    color: '#FAF4D8',
-                    lineHeight: 1,
-                    position: 'absolute',
-                    top: 16,
-                    right: 24,
-                    fontWeight: 900,
-                  }}>
-                    "
-                  </div>
-
-                  {/* Stars */}
-                  <div style={{ display: 'flex', gap: 2, marginBottom: 16 }}>
+                <div style={{ padding: '28px 24px', border: '1px solid #E8E8E8', background: '#FFFFFF', position: 'relative', transition: 'border-color 0.2s, box-shadow 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.35)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(0,0,0,0.05)' }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = '#E8E8E8'; e.currentTarget.style.boxShadow = 'none' }}>
+                  <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 56, color: '#FAF4D8', lineHeight: 1, position: 'absolute', top: 12, right: 20, fontWeight: 900 }}>"</div>
+                  <div style={{ display: 'flex', gap: 2, marginBottom: 14 }}>
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <div key={j} style={{ width: 10, height: 10, background: '#C9A84C', clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }} />
                     ))}
                   </div>
-
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: '#555555', lineHeight: 1.75, marginBottom: 24, fontStyle: 'italic' }}>
-                    "{t.text}"
-                  </p>
-
-                  <div style={{ borderTop: '1px solid #F0F0F0', paddingTop: 16, display: 'flex', gap: 12, alignItems: 'center' }}>
-                    <div style={{
-                      width: 38, height: 38,
-                      background: 'linear-gradient(135deg, #C9A84C, #E2C46A)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontFamily: "'Poppins', sans-serif",
-                      fontSize: 13, fontWeight: 700,
-                      color: '#1A1A1A',
-                    }}>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: '#555555', lineHeight: 1.75, marginBottom: 20, fontStyle: 'italic' }}>"{t.text}"</p>
+                  <div style={{ borderTop: '1px solid #F0F0F0', paddingTop: 14, display: 'flex', gap: 10, alignItems: 'center' }}>
+                    <div style={{ width: 36, height: 36, background: 'linear-gradient(135deg, #C9A84C, #E2C46A)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Poppins', sans-serif", fontSize: 12, fontWeight: 700, color: '#1A1A1A', flexShrink: 0 }}>
                       {t.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -251,33 +176,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── INDUSTRIES ──────────────────────────────────── */}
-      <section style={{ padding: '80px 24px', background: '#FAFAFA', borderTop: '1px solid #E8E8E8' }}>
+      {/* ── INDUSTRIES ── */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FAFAFA', borderTop: '1px solid #E8E8E8' }}>
         <div className="max-w-7xl mx-auto">
           <FadeUp>
             <SectionLabel>Industries Served</SectionLabel>
             <GoldLine />
-            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(24px, 3vw, 34px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 40 }}>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(22px, 3.5vw, 34px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 32 }}>
               Trusted Across Sectors
             </h2>
           </FadeUp>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          <div className="flex flex-wrap gap-2">
             {industries.map((ind, i) => (
               <FadeUp key={i} delay={i * 0.05}>
-                <div style={{
-                  padding: '10px 20px',
-                  border: '1px solid #E8E8E8',
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: '#555555',
-                  letterSpacing: '0.06em',
-                  transition: 'all 0.2s',
-                  cursor: 'default',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = '#C9A84C'; e.currentTarget.style.color = '#9A7A08'; e.currentTarget.style.background = '#FAF4D8' }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = '#E8E8E8'; e.currentTarget.style.color = '#555555'; e.currentTarget.style.background = 'transparent' }}
-                >
+                <div style={{ padding: '9px 18px', border: '1px solid #E8E8E8', fontFamily: "'Poppins', sans-serif", fontSize: 12, fontWeight: 600, color: '#555555', letterSpacing: '0.06em', transition: 'all 0.2s', cursor: 'default' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = '#C9A84C'; e.currentTarget.style.color = '#9A7A08'; e.currentTarget.style.background = '#FAF4D8' }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = '#E8E8E8'; e.currentTarget.style.color = '#555555'; e.currentTarget.style.background = 'transparent' }}>
                   {ind}
                 </div>
               </FadeUp>
@@ -286,21 +200,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA BAND ────────────────────────────────────── */}
-      <section style={{ padding: '80px 24px', background: '#1A1A1A', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      {/* ── CTA BAND ── */}
+      <section className="py-20 px-5 sm:px-8 text-center" style={{ background: '#1A1A1A', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, rgba(201,168,76,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="max-w-2xl mx-auto relative z-10">
           <FadeUp>
-            <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>
-              Get Started
-            </p>
-            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#FFFFFF', marginBottom: 16, lineHeight: 1.15 }}>
+            <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 14 }}>Get Started</p>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(26px, 5vw, 44px)', fontWeight: 800, color: '#FFFFFF', marginBottom: 14, lineHeight: 1.15 }}>
               Ready to Source Smarter?
             </h2>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.45)', marginBottom: 40, lineHeight: 1.7 }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.45)', marginBottom: 36, lineHeight: 1.7 }}>
               Submit your bulk requirement and receive competitive quotes within 24 hours. No commitment required.
             </p>
-            <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/quote"><BtnPrimary>Submit RFQ</BtnPrimary></Link>
               <Link to="/contact"><BtnOutline>Talk to Our Team</BtnOutline></Link>
             </div>
