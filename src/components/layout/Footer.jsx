@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Links */}
           {Object.entries(footerLinks).map(([group, links]) => (
-            <div key={group} className="md:col-span-2">
+            <div key={group} className="md:col-span-2 col-span-6 sm:col-span-3">
               <p className="text-xs font-semibold mb-5" style={{
                 color: '#C9A84C',
                 letterSpacing: '0.18em',
