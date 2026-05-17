@@ -33,7 +33,7 @@ export default function AboutPage() {
               <h1 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 800, fontSize: 'clamp(30px, 5vw, 54px)', color: '#FFFFFF', lineHeight: 1.1, marginBottom: 18 }}>
                 Simplifying Industrial<br />
                 <span style={{ background: 'linear-gradient(135deg, #C9A84C, #E2C46A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  Sourcing Since 2018
+                  Sourcing Since 2025
                 </span>
               </h1>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 480 }}>
@@ -55,10 +55,10 @@ export default function AboutPage() {
             <FadeUp delay={0.15}>
               <div className="grid grid-cols-2" style={{ gap: 1, background: 'rgba(201,168,76,0.15)' }}>
                 {[
-                  { num: '500+', lbl: 'Products in Catalog' },
-                  { num: '100+', lbl: 'Verified B2B Clients' },
-                  { num: '50+', lbl: 'Global Brands' },
-                  { num: '6+', lbl: 'Years of Expertise' },
+                  { num: '30+', lbl: 'Products in Catalog' },
+                  { num: '20+', lbl: 'Verified B2B Clients' },
+                  { num: '15+', lbl: 'Global Brands' },
+                  { num: '6+', lbl: 'Months of Expertise' },
                 ].map((s, i) => (
                   <div key={i} style={{ background: '#111111', padding: 'clamp(20px, 4vw, 32px) clamp(16px, 3vw, 28px)', textAlign: 'center' }}>
                     <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 900, color: '#C9A84C', lineHeight: 1 }}>{s.num}</p>
@@ -117,35 +117,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-16 sm:py-24 px-5 sm:px-8" style={{ background: '#FAFAFA', borderTop: '1px solid #E8E8E8' }}>
-        <div className="max-w-7xl mx-auto">
-          <FadeUp>
-            <SectionLabel>Our Journey</SectionLabel>
-            <GoldLine />
-            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(22px, 4vw, 36px)', fontWeight: 800, color: '#1A1A1A', marginBottom: 48 }}>
-              Built on Six Years of Trust
-            </h2>
-          </FadeUp>
-          <div style={{ position: 'relative', maxWidth: 680 }}>
-            <div style={{ position: 'absolute', left: 56, top: 0, bottom: 0, width: 1, background: '#E8E8E8' }} />
-            {timeline.map((item, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
-                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: 20, marginBottom: 32, position: 'relative' }}>
-                  <div style={{ textAlign: 'right', paddingRight: 16, paddingTop: 2 }}>
-                    <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 12, fontWeight: 700, color: '#C9A84C' }}>{item.year}</span>
-                  </div>
-                  <div style={{ position: 'absolute', left: 52, top: 6, width: 9, height: 9, background: '#C9A84C', borderRadius: '50%', border: '2px solid #FAFAFA' }} />
-                  <div style={{ paddingLeft: 12 }}>
-                    <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 14, fontWeight: 700, color: '#1A1A1A', marginBottom: 5 }}>{item.title}</p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: '#6B6B6B', lineHeight: 1.65 }}>{item.desc}</p>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Industries */}
       <section className="py-16 px-5 sm:px-8" style={{ background: '#0F0F0F' }}>

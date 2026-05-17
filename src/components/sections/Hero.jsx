@@ -54,7 +54,7 @@ export default function Hero() {
             {/* Stats */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-wrap gap-6 sm:gap-10 mt-10">
-              {[{ num: '500+', lbl: 'Products' }, { num: '100+', lbl: 'Clients' }, { num: '6+', lbl: 'Years' }, { num: '50+', lbl: 'Brands' }].map((s, i) => (
+              {[{ num: '30+', lbl: 'Products' }, { num: '20+', lbl: 'Clients' }, { num: '6+', lbl: 'Months' }, { num: '50+', lbl: 'Brands' }].map((s, i) => (
                 <div key={i} className="flex flex-col gap-0.5">
                   <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: 800, color: '#C9A84C', lineHeight: 1 }}>{s.num}</span>
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 10, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{s.lbl}</span>

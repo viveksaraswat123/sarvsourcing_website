@@ -254,14 +254,14 @@ export const products = [
 ]
 
 export const testimonials = [
-  {
-    id: 1,
-    name: 'Rajesh Kumar',
-    role: 'Procurement Head',
-    company: 'TechMfg Industries',
-    text: 'SARV Sourcing delivered 10,000 Molex connectors on schedule with full traceability documentation. Their pricing beat our existing vendors by 18% on bulk orders. The team is professional and highly responsive.',
-    rating: 5,
-  },
+  // {
+  //   id: 1,
+  //   name: 'Rajesh Kumar',
+  //   role: 'Procurement Head',
+  //   company: 'TechMfg Industries',
+  //   text: 'SARV Sourcing delivered 10,000 Molex connectors on schedule with full traceability documentation. Their pricing beat our existing vendors by 18% on bulk orders. The team is professional and highly responsive.',
+  //   rating: 5,
+  // },
   {
     id: 2,
     name: 'Sneha Patel',
@@ -269,15 +269,15 @@ export const testimonials = [
     company: 'AutoDrive Components',
     text: 'We rely on SARV for all specialty cable requirements. Their custom sourcing capability eliminated three separate vendors from our supply chain. Saved us significant procurement overhead.',
     rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Amit Mehra',
-    role: 'IT Infrastructure Manager',
-    company: 'GreenField Technologies',
-    text: 'Sourced 50 all-in-one PCs for our new office setup through SARV. Competitive pricing, proper invoicing, and on-time delivery. Will be using them for all future IT procurement. Overall best experience provided by their team.',
-    rating: 5,
-  },
+  }
+  // {
+  //   id: 3,
+  //   name: 'Amit Mehra',
+  //   role: 'IT Infrastructure Manager',
+  //   company: 'GreenField Technologies',
+  //   text: 'Sourced 50 all-in-one PCs for our new office setup through SARV. Competitive pricing, proper invoicing, and on-time delivery. Will be using them for all future IT procurement. Overall best experience provided by their team.',
+  //   rating: 5,
+  // },
 ]
 
 export const stats = [
