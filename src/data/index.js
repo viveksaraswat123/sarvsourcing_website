@@ -1,11 +1,11 @@
 export const categories = [
-  { id: 'electronic-components', name: 'Electronic Components', description: 'Diodes, Resistors, Capacitors', count: 120 },
-  { id: 'cables',                name: 'Specialty Cables',       description: 'Flexible, Tinned Copper, Custom',    count: 85  },
-  { id: 'lighting',              name: 'Lighting',               description: 'LED Bulbs & Commercial Fixtures',    count: 42  },
-  { id: 'it-hardware',           name: 'IT Hardware',            description: 'AIO PCs, UPS, Laptops',              count: 68  },
-  { id: 'connectors',            name: 'Connectors',             description: 'Molex, JST, CS Series',              count: 97  },
-  { id: 'terminals',             name: 'Terminals',              description: 'Molex, JST, CS Terminals',           count: 74  },
-  { id: 'switches',              name: 'Switches',               description: 'Teknic Rocker, Bulgin Series',       count: 39  },
+  { id: 'electronic-components', name: 'Electronic Components', description: 'Diodes, Resistors, Capacitors', count: 12 },
+  { id: 'cables',                name: 'Specialty Cables',       description: 'Flexible, Tinned Copper, Custom',    count: 5  },
+  { id: 'lighting',              name: 'Lighting',               description: 'LED Bulbs & Commercial Fixtures',    count: 8  },
+  { id: 'it-hardware',           name: 'IT Hardware',            description: 'AIO PCs, UPS, Laptops',              count: 8  },
+  { id: 'connectors',            name: 'Connectors',             description: 'Molex, JST, CS Series',              count: 4  },
+  { id: 'terminals',             name: 'Terminals',              description: 'Molex, JST, CS Terminals',           count: 7  },
+  { id: 'switches',              name: 'Switches',               description: 'Teknic Rocker, Bulgin Series',       count: 9  },
 ]
 
 export const products = [
@@ -76,7 +76,7 @@ export const products = [
     categoryLabel: 'Lighting',
     brand: 'Philips / OSRAM',
     partNo: 'LED-9W-B22-3000K',
-    moq: '500 pcs',
+    moq: '50 pcs',
     availability: 'In Stock',
     featured: true,
     specs: {
@@ -139,7 +139,7 @@ export const products = [
     categoryLabel: 'Switches',
     brand: 'Teknic',
     partNo: 'TK-SPST-16A-250V',
-    moq: '500 pcs',
+    moq: '50 pcs',
     availability: 'In Stock',
     featured: false,
     specs: {
@@ -159,7 +159,7 @@ export const products = [
     categoryLabel: 'Terminals',
     brand: 'Molex',
     partNo: 'MOL-TERM-1824',
-    moq: '1000 pcs',
+    moq: '100 pcs',
     availability: 'In Stock',
     featured: false,
     specs: {
@@ -199,7 +199,7 @@ export const products = [
     categoryLabel: 'Connectors',
     brand: 'CS / Compatible',
     partNo: 'CS-HSG-SERIES',
-    moq: '500 pcs',
+    moq: '50 pcs',
     availability: 'In Stock',
     featured: false,
     specs: {
@@ -238,7 +238,7 @@ export const products = [
     categoryLabel: 'Electronic Components',
     brand: 'ON Semiconductor / Vishay',
     partNo: '1N4007-DO41',
-    moq: '5000 pcs',
+    moq: '100 pcs',
     availability: 'In Stock',
     featured: false,
     specs: {
@@ -254,21 +254,21 @@ export const products = [
 ]
 
 export const testimonials = [
-  // {
-  //   id: 1,
-  //   name: 'Rajesh Kumar',
-  //   role: 'Procurement Head',
-  //   company: 'TechMfg Industries',
-  //   text: 'SARV Sourcing delivered 10,000 Molex connectors on schedule with full traceability documentation. Their pricing beat our existing vendors by 18% on bulk orders. The team is professional and highly responsive.',
-  //   rating: 5,
-  // },
+  {
+    id: 1,
+    name: 'Rajesh Kumar',
+    role: 'Procurement Head',
+    company: 'Annika Technologies',
+    text: 'SARV Sourcing delivered 10,000 Molex connectors on schedule with full traceability documentation. Their pricing beat our existing vendors on bulk orders. The team is professional and highly responsive.',
+    rating: 5,
+  },
   {
     id: 2,
     name: 'Sneha Patel',
     role: 'Supply Chain Manager',
     company: 'AutoDrive Components',
     text: 'We rely on SARV for all specialty cable requirements. Their custom sourcing capability eliminated three separate vendors from our supply chain. Saved us significant procurement overhead.',
-    rating: 5,
+    rating: 4,
   }
   // {
   //   id: 3,
