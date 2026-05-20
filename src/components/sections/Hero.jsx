@@ -24,12 +24,12 @@ export default function Hero() {
 
           {/* Left: copy */}
           <div className="lg:col-span-7">
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="flex items-center gap-3 mb-6">
+            {/* <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="flex items-center gap-3 mb-6">
               <span style={{ display: 'block', width: 28, height: 1, background: '#C9A84C', flexShrink: 0 }} />
               <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C' }}>
                 B2B Sourcing Platform · India
               </p>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
               style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 800, fontSize: 'clamp(32px, 6vw, 64px)', lineHeight: 1.08, color: '#FFFFFF', marginBottom: 20 }}>
