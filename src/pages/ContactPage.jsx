@@ -2,10 +2,39 @@ import { useState } from 'react'
 import { FadeUp, SectionLabel, GoldLine, BtnPrimary, FormInput, FormTextarea } from '../components/ui/index.jsx'
 
 const contactInfo = [
-  { label: 'Office Address', lines: ['E907, Stellar MI Citihomes,', 'Sector Omicron 3,', 'Greater Noida – 201310, UP'] },
-  { label: 'Phone / WhatsApp', lines: ['+91 87085 91236'], link: 'tel:+918708591236' },
-  { label: 'Email', lines: ['sarvsourcing@gmail.com'], link: 'mailto:sarvsourcing@gmail.com' },
-  { label: 'Business Hours', lines: ['Monday – Saturday', '9:00 AM – 6:30 PM IST'] },
+  {
+    label: 'Office Address',
+    lines: [
+      'E907, Stellar MI Citihomes,',
+      'Sector Omicron 3,',
+      'Greater Noida - 201310, UP',
+    ],
+  },
+
+  {
+    label: 'Phone / WhatsApp',
+    lines: ['+91 87085 91236'],
+    link: 'tel:+918708591236',
+  },
+
+  {
+    label: 'Email',
+    lines: ['info@sarvsourcing.com'],
+    link: 'mailto:info@sarvsourcing.com',
+  },
+
+  {
+    label: 'GST Number',
+    lines: ['09AOYPB6439C1ZO'],
+  },
+
+  {
+    label: 'Business Hours',
+    lines: [
+      'Monday - Saturday',
+      '9:00 AM - 6:30 PM IST',
+    ],
+  },
 ]
 
 export default function ContactPage() {
