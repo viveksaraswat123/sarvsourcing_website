@@ -8,7 +8,7 @@ export default function QuotePage() {
   const set = field => e => setForm(f => ({ ...f, [field]: e.target.value }))
 
   const catOptions = [
-    { value: '', label: '— Select Category —' },
+    { value: '', label: '- Select Category -' },
     ...categories.map(c => ({ value: c.id, label: c.name })),
     { value: 'custom', label: 'Custom / Other Requirement' },
   ]

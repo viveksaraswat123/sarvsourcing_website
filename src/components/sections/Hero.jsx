@@ -63,7 +63,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: category panel — desktop only */}
+          {/* Right: category panel - desktop only */}
           <motion.div initial={{ opacity: 0, x: 32 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.35 }} className="lg:col-span-5 hidden lg:block">
             <div style={{ border: '1px solid rgba(201,168,76,0.15)', background: 'rgba(255,255,255,0.025)', padding: 28 }}>
               <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(201,168,76,0.6)', marginBottom: 20 }}>Product Categories</p>

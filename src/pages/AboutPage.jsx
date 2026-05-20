@@ -8,14 +8,14 @@ const timeline = [
   { year: '2021', title: 'IT Hardware Launch', desc: 'Launched dedicated IT hardware sourcing, serving SMEs and enterprises across NCR.' },
   { year: '2022', title: 'LED Lighting Portfolio', desc: 'Added commercial LED lighting products from certified global brands for bulk supply.' },
   { year: '2023', title: '100+ Client Milestone', desc: 'Crossed 100 verified B2B clients. Expanded pan-India delivery partnerships.' },
-  { year: '2024', title: 'Digital Platform', desc: 'Launched sarvsourcing.com — enabling online catalog browsing and RFQ submission.' },
+  { year: '2024', title: 'Digital Platform', desc: 'Launched sarvsourcing.com - enabling online catalog browsing and RFQ submission.' },
 ]
 
 const values = [
   { title: 'Quality First', desc: 'Every product in our catalog meets strict quality standards. We work only with certified manufacturers and authorized distributors.' },
   { title: 'Transparent Pricing', desc: 'No hidden charges. Competitive bulk pricing based on direct manufacturer relationships built over six years.' },
   { title: 'Reliable Delivery', desc: 'Our logistics partnerships ensure timely fulfillment across India. We track every order to your door.' },
-  { title: 'Expert Support', desc: 'Our technical team helps you find the right product for your specification — not just the nearest SKU.' },
+  { title: 'Expert Support', desc: 'Our technical team helps you find the right product for your specification - not just the nearest SKU.' },
 ]
 
 export default function AboutPage() {
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 480 }}>
-                SARV Sourcing Solutions bridges the gap between global manufacturers and Indian industries — eliminating procurement complexity through a single trusted source.
+                SARV Sourcing Solutions bridges the gap between global manufacturers and Indian industries - eliminating procurement complexity through a single trusted source.
               </p>
               <div className="flex flex-wrap gap-3 mt-8">
                 <Link to="/quote"><BtnPrimary>Request a Quote</BtnPrimary></Link>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 10 }}>Mission</p>
                 <h3 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(18px, 3vw, 22px)', fontWeight: 700, color: '#1A1A1A', marginBottom: 12, lineHeight: 1.3 }}>One Source. Complete Solutions.</h3>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: '#6B6B6B', lineHeight: 1.8 }}>
-                  To be India's most reliable B2B sourcing partner by connecting businesses with high-quality electronic, industrial, and IT hardware products — with speed, transparency, and expertise.
+                  To be India's most reliable B2B sourcing partner by connecting businesses with high-quality electronic, industrial, and IT hardware products - with speed, transparency, and expertise.
                 </p>
               </div>
             </FadeUp>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 10 }}>Vision</p>
                 <h3 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(18px, 3vw, 22px)', fontWeight: 700, color: '#1A1A1A', marginBottom: 12, lineHeight: 1.3 }}>The Future of Industrial Procurement</h3>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: '#6B6B6B', lineHeight: 1.8 }}>
-                  To build the most trusted digital sourcing platform for Indian industries — leveraging technology and deep supplier relationships to reduce procurement time and cost.
+                  To build the most trusted digital sourcing platform for Indian industries - leveraging technology and deep supplier relationships to reduce procurement time and cost.
                 </p>
               </div>
             </FadeUp>

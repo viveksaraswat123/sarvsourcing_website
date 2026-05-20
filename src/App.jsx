@@ -74,7 +74,7 @@ function AppRoutes() {
             <PageWrapper><QuotePage /></PageWrapper>
           </MainLayout>
         } />
-        {/* Admin — no footer/whatsapp */}
+        {/* Admin - no footer/whatsapp */}
         <Route path="/admin" element={
           <>
             <Navbar />

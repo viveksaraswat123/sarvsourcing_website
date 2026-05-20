@@ -33,7 +33,7 @@ export default function ContactPage() {
         {/* Stack on mobile, 2-col on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          {/* Contact form — wider */}
+          {/* Contact form - wider */}
           <div className="lg:col-span-2">
             <FadeUp>
               <div style={{ border: '1px solid #E8E8E8' }}>

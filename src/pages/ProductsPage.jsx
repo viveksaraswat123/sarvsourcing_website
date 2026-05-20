@@ -57,7 +57,7 @@ export default function ProductsPage() {
           </button>
         </div>
 
-        {/* Category filter — scrollable on mobile */}
+        {/* Category filter - scrollable on mobile */}
         <div className="flex gap-2 mb-8 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
           {[{ id: 'all', name: 'All Products', count: products.length }, ...categories].map(cat => {
             const isActive = activeCat === cat.id

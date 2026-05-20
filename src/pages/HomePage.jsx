@@ -29,7 +29,7 @@ export default function HomePage() {
               Browse by Category
             </h2>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 16px)', color: '#6B6B6B', maxWidth: 500, lineHeight: 1.7, marginBottom: 40 }}>
-              From electronic components to IT hardware — find everything your business needs.
+              From electronic components to IT hardware - find everything your business needs.
             </p>
           </FadeUp>
           {/* Responsive: 1 col mobile → 2 col tablet → 4 col desktop */}
@@ -89,7 +89,7 @@ export default function HomePage() {
                 Your Sourcing Partner, Not Just a Supplier
               </h2>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(14px, 2vw, 15px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: 440 }}>
-                We go beyond transactions. SARV provides end-to-end procurement support — from specification matching to bulk fulfillment — so your business never stops.
+                We go beyond transactions. SARV provides end-to-end procurement support - from specification matching to bulk fulfillment - so your business never stops.
               </p>
               <div style={{ marginTop: 32 }}>
                 <Link to="/about"><BtnPrimary>Learn About Us</BtnPrimary></Link>
@@ -102,7 +102,7 @@ export default function HomePage() {
                 { title: 'Bulk Pricing', desc: 'Direct manufacturer relationships give you best-in-class volume pricing.' },
                 { title: 'Fast Fulfillment', desc: 'Pan-India logistics for quick turnaround on bulk orders.' },
                 { title: 'Technical Expertise', desc: 'Our specialists help you find the exact specification you need.' },
-                { title: 'Custom Sourcing', desc: 'Submit any requirement — we source what the market doesn\'t stock.' },
+                { title: 'Custom Sourcing', desc: 'Submit any requirement - we source what the market doesn\'t stock.' },
                 { title: 'Single Vendor', desc: 'One trusted source for all electronic, IT, and industrial needs.' },
               ].map((item, i) => (
                 <FadeUp key={i} delay={i * 0.07}>
