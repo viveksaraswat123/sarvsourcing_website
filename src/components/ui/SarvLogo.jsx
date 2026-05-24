@@ -4,27 +4,27 @@ export default function SarvLogo({
 }) {
   const sizes = {
     sm: {
-      logo: 34,
-      textSize: 14,
-      subSize: 8,
+      logo: 30,
+      textSize: 13,
+      subSize: 7,
     },
 
     md: {
-      logo: 46,
-      textSize: 18,
-      subSize: 10,
+      logo: 40,
+      textSize: 17,
+      subSize: 9,
     },
 
     lg: {
-      logo: 60,
-      textSize: 24,
-      subSize: 12,
+      logo: 52,
+      textSize: 22,
+      subSize: 11,
     },
 
     xl: {
-      logo: 82,
-      textSize: 32,
-      subSize: 15,
+      logo: 74,
+      textSize: 30,
+      subSize: 14,
     },
   }
 
@@ -34,7 +34,7 @@ export default function SarvLogo({
 
   const subColor =
     variant === 'dark'
-      ? 'rgba(255,255,255,0.62)'
+      ? 'rgba(255,255,255,0.78)'
       : '#666666'
 
   return (
@@ -42,11 +42,11 @@ export default function SarvLogo({
       style={{
         display: 'flex',
         alignItems: 'center',
-        gap: 12,
+        gap: 10,
         userSelect: 'none',
       }}
     >
-      {/* Logo Image */}
+      {/* Logo */}
       <img
         src="/logo1.png"
         alt="SARV Logo"
@@ -58,7 +58,7 @@ export default function SarvLogo({
 
           filter:
             variant === 'dark'
-              ? 'drop-shadow(0 2px 8px rgba(201,168,76,0.18))'
+              ? 'drop-shadow(0 2px 10px rgba(201,168,76,0.22))'
               : 'none',
         }}
       />
@@ -69,32 +69,41 @@ export default function SarvLogo({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          lineHeight: 1,
+          transform: 'translateY(-1px)',
         }}
       >
+        {/* Main Brand */}
         <div
           style={{
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 800,
             fontSize: s.textSize,
             color: gold,
-            letterSpacing: '0.14em',
+            letterSpacing: '0.08em',
             lineHeight: 1,
           }}
         >
           SARV
         </div>
 
+        {/* Subtitle */}
         <div
           style={{
-            marginTop: 4,
+            marginTop: 3,
+
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 500,
+
             fontSize: s.subSize,
+
             color: subColor,
-            letterSpacing: '0.18em',
+
+            letterSpacing: '0.10em',
+
             textTransform: 'uppercase',
-            lineHeight: 1.2,
+
+            lineHeight: 1.1,
+
             whiteSpace: 'nowrap',
           }}
         >
