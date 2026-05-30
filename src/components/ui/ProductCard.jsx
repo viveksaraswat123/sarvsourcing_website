@@ -92,16 +92,15 @@ function PlaceholderVisual({ category }) {
 
 // Product Image
 function ProductImage({ product }) {
-  const extensions = ['jpg', 'jpeg', 'png', 'webp']
-
-  const [extIndex, setExtIndex] = useState(0)
   const [failed, setFailed] = useState(false)
 
   if (failed) {
-    return (
-      <PlaceholderVisual category={product.category} />
-    )
+    return <PlaceholderVisual category={product.category} />
   }
+
+  const imageSrc =
+    product.image ||
+    `/products/product-${product.id}.jpg`
 
   return (
     <div
@@ -116,22 +115,16 @@ function ProductImage({ product }) {
       }}
     >
       <img
-        src={`/products/product-${product.id}.${extensions[extIndex]}`}
+        src={imageSrc}
         alt={product.name}
         onError={() => {
-          if (extIndex + 1 < extensions.length) {
-            setExtIndex(i => i + 1)
-          } else {
-            setFailed(true)
-          }
+          setFailed(true)
         }}
         onMouseEnter={e => {
-          e.currentTarget.style.transform =
-            'scale(1.05)'
+          e.currentTarget.style.transform = 'scale(1.05)'
         }}
         onMouseLeave={e => {
-          e.currentTarget.style.transform =
-            'scale(1)'
+          e.currentTarget.style.transform = 'scale(1)'
         }}
         style={{
           width: '100%',
@@ -146,7 +139,6 @@ function ProductImage({ product }) {
     </div>
   )
 }
-
 export default function ProductCard({
   product,
   onInquiry,

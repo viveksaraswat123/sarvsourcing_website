@@ -255,6 +255,80 @@ export const products = [
     },
     description: 'Industry-standard 1N4007 rectifier diode in DO-41 package. Widely used in power supplies, battery chargers, and industrial control circuits.',
   },
+  {
+  id: 13,
+  name: '2 Pin AC Power Cord',
+  category: 'cables',
+  categoryLabel: 'Specialty Cables',
+  brand: 'Annika',
+  partNo: 'AC-2PIN-WHT',
+  moq: '100 pcs',
+  availability: 'In Stock',
+  featured: true,
+
+  specs: {
+    'Plug Type': '2 Pin',
+    'Wire Type': 'Twin Core',
+    Material: 'Copper',
+    Color: 'White',
+    Voltage: '230V AC',
+  },
+
+  description:
+    'High-quality 2 Pin AC power cord suitable for LED drivers, adapters, PCB assemblies, industrial electronics and electrical devices.',
+
+  image: '/products/ac-cord-white.png',
+},
+
+{
+  id: 14,
+  name: 'Multi Wire Harness Assembly',
+  category: 'cables',
+  categoryLabel: 'Specialty Cables',
+  brand: 'Annika',
+  partNo: 'WH-MULTI-01',
+  moq: '50 pcs',
+  availability: 'In Stock',
+  featured: true,
+
+  specs: {
+    'Connector Type': 'Multi Pin',
+    'Wire Material': 'Copper',
+    Insulation: 'PVC',
+    Application: 'Industrial Electronics',
+    Length: 'Custom',
+  },
+
+  description:
+    'Industrial multi-wire harness assembly designed for PCB integration, machinery, control systems and OEM electrical applications.',
+
+  image: '/products/wire-harness.png',
+},
+
+{
+  id: 15,
+  name: 'Rocker Switch Connector',
+  category: 'switches',
+  categoryLabel: 'Switches',
+  brand: 'Annika',
+  partNo: 'RS-CON-01',
+  moq: '50 pcs',
+  availability: 'In Stock',
+  featured: true,
+
+  specs: {
+    'Switch Type': 'Rocker',
+    Connector: '2 Pin',
+    Material: 'ABS Plastic',
+    Application: 'Power Control',
+    Rating: '250V AC',
+  },
+
+  description:
+    'Heavy-duty rocker switch connector assembly suitable for industrial control panels, power switching systems and electronic equipment.',
+
+  image: '/products/rocker-switch.png',
+},
 ]
 
 export const testimonials = [
